@@ -15,7 +15,7 @@ public class Slicer : MonoBehaviour
 		var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		worldPos.z = 0;
 
-		//transform.position = worldPos;
+
 		rb.MovePosition(worldPos);
 	}
 
