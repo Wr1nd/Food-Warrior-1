@@ -437,7 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b6c4b8ef8604313abd85951f00d414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4193995009470838112, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  spawnSpeed: 1
+  fruitPrefab: {fileID: 4193995009470838112, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  bombPrefab: {fileID: 4221038528623796532, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
 --- !u!1 &2057270871
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +521,7 @@ Transform:
   m_GameObject: {fileID: 2057270871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
