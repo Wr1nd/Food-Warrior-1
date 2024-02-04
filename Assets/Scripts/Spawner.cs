@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	public GameObject fruit;
+	public List<GameObject> fruits;
 
 	void Start()
 	{
@@ -11,7 +12,9 @@ public class Spawner : MonoBehaviour
 
 	void Spawn()
 	{
+		var fruit = fruits[Random.Range(0,fruits.Count)];
 		var obj = Instantiate(fruit);
-		obj.transform.position = new Vector3(0,-6,0);
+		var x = Random.Range(-5f, 5f);
+		obj.transform.position = new Vector3(x,-6,0);
 	}
 }
