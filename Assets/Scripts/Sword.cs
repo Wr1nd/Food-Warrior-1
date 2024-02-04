@@ -22,7 +22,7 @@ public class Sword : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print(":)");
-        Destroy(other.gameObject);
+        var fruit = other.gameObject.GetComponent<Fruit>();
+        fruit.Slice();
     }
 }
