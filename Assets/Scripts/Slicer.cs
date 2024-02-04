@@ -15,12 +15,12 @@ public class Slicer : MonoBehaviour
 		var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		worldPos.z = 0;
 
-
 		rb.MovePosition(worldPos);
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Destroy(other.gameObject);
+		var fruit = other.gameObject.GetComponent<Fruit>();
+		fruit.Slice();
 	}
 }
