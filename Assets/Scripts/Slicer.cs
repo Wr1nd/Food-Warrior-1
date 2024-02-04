@@ -23,6 +23,7 @@ public class Slicer : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Destroy(other.gameObject);
+		var fruit = other.gameObject.GetComponent<Fruit>();
+		fruit.Slice();
 	}
 }
