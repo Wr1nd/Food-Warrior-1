@@ -440,6 +440,29 @@ MonoBehaviour:
   spawnSpeed: 1
   fruitPrefab: {fileID: 4193995009470838112, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
   bombPrefab: {fileID: 4221038528623796532, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
+  waves:
+  - fruits:
+    - isFruit: 1
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 10}
+  - fruits:
+    - isFruit: 0
+      delay: 0
+      x: 1.96
+      velocity: {x: -2, y: 10}
+  - fruits:
+    - isFruit: 0
+      delay: 0
+      x: -2
+      velocity: {x: 0, y: 0}
+    - isFruit: 0
+      delay: 0
+      x: 2
+      velocity: {x: 0, y: 0}
+  - fruits: []
+  - fruits: []
+  currentWave: 1
 --- !u!1 &1647412023
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,63 +5550,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!1001 &3036557974083840343
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 178568791723153751, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6488680288489534511, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
-      propertyPath: m_Name
-      value: Pear Explode Particles
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5593,4 +5559,3 @@ SceneRoots:
   - {fileID: 1102349358}
   - {fileID: 2057270873}
   - {fileID: 1364183241}
-  - {fileID: 3036557974083840343}

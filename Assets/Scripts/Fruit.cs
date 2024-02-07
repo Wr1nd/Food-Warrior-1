@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fruit : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject particlePrefab;
-
+    public UnityEvent onShit;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,7 +29,8 @@ public class Fruit : MonoBehaviour
 
     public void Slice()
     {
-        Instantiate(particlePrefab, transform.position, Quaternion.Euler(0, 0, 0));
+        var particle = Instantiate(particlePrefab);
+        particle.transform.position = transform.position;
         Destroy(gameObject);
     }
 }
