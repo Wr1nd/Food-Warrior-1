@@ -8,6 +8,7 @@ public class FruitEntry
     public float delay;
     public float x;
     public Vector2 velocity;
+    public bool isRandomPosition;
 }
 
 
@@ -38,25 +39,16 @@ public class Spawner : MonoBehaviour
                 var fruit = wave.fruits[i];
                 await new WaitForSeconds(fruit.delay);
 
-
                 var prefab = fruit.isFruit ? fruitPrefab : bombPrefab;
                 var obj = Instantiate(prefab);
-                obj.transform.position = new Vector3(fruit.x, -5, 0);
+                var x = fruit.isRandomPosition ? Random.Range(-3f,3f): fruit.x;
+                obj.transform.position = new Vector3(x, -5, 0);
+                obj.GetComponent<Rigidbody2D>().velocity = fruit.velocity;
 
             }
 
             await new WaitForSeconds(3f);
             currentWave++;
         }
-    }
-
-    public void Spawn()
-    {
-        GameObject prefab;
-        prefab = Random.Range(0, 100) < 80 ? fruitPrefab : bombPrefab;
-
-        var obj = Instantiate(prefab);
-        var pos = new Vector3(Random.Range(-5f,5f), -5, 0);
-        obj.transform.position = pos;
     }
 }
