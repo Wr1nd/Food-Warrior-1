@@ -5543,12 +5543,33 @@ MonoBehaviour:
   bombPrefab: {fileID: 8446339323112853869, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
   currentWave: 0
   waves:
-  - isBomb: 0
-    x: 0
-  - isBomb: 1
-    x: 1
-  - isBomb: 0
-    x: -4
+  - foods:
+    - isBomb: 0
+      x: -4
+      delay: 0
+      isRandomPosition: 1
+    - isBomb: 1
+      x: 0
+      delay: 0
+      isRandomPosition: 0
+    - isBomb: 0
+      x: 4
+      delay: 0
+      isRandomPosition: 1
+  - foods:
+    - isBomb: 0
+      x: 3
+      delay: 0
+      isRandomPosition: 0
+  - foods:
+    - isBomb: 1
+      x: 0
+      delay: 0
+      isRandomPosition: 0
+    - isBomb: 1
+      x: -3
+      delay: 1
+      isRandomPosition: 0
 --- !u!4 &1218804783
 Transform:
   m_ObjectHideFlags: 0

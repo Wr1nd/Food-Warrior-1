@@ -6,8 +6,9 @@ public class FoodEntry
 {
     public bool isBomb;
     public float x;
-    // delay, isRandomPosition
-    // BONUS : velocity
+    public float delay;
+    public bool isRandomPosition;
+    public Vector2 velocity = new Vector2(0,10);
 }
 
 [System.Serializable]
@@ -35,10 +36,13 @@ public class Spawner : MonoBehaviour
             for (int i = 0; i < wave.foods.Count; i++)
             {
                 var food = wave.foods[i];
+                await new WaitForSeconds(food.delay);
 
                 var prefab = food.isBomb ? bombPrefab : fruitPrefab;
                 var go = Instantiate(prefab);
-                go.transform.position = new Vector3(food.x, -5, 0);
+                var x =  food.isRandomPosition ? Random.Range(-5f, 5f) : food.x;
+                go.transform.position = new Vector3(x, -5, 0);
+                go.GetComponent<Rigidbody2D>().velocity = food.velocity;
             }
 
             await new WaitForSeconds(3f);
