@@ -1,4 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class FoodEntry
+{
+    public bool isBomb;
+    public float x;
+    // delay, isRandomPosition
+    // BONUS : velocity
+}
+
+[System.Serializable]
+public class Wave
+{
+    public List<FoodEntry> foods;
+}
 
 public class Spawner : MonoBehaviour
 {
@@ -7,9 +23,27 @@ public class Spawner : MonoBehaviour
     public GameObject fruitPrefab;
     public GameObject bombPrefab;
 
-    void Start()
+    public int currentWave;
+    public List<Wave> waves;
+
+    async void Start()
     {
-        InvokeRepeating("Spawn",0f,spawnSpeed);
+        while (currentWave < waves.Count)
+        {
+            var wave = waves[currentWave];
+
+            for (int i = 0; i < wave.foods.Count; i++)
+            {
+                var food = wave.foods[i];
+
+                var prefab = food.isBomb ? bombPrefab : fruitPrefab;
+                var go = Instantiate(prefab);
+                go.transform.position = new Vector3(food.x, -5, 0);
+            }
+
+            await new WaitForSeconds(3f);
+            currentWave++;
+        }
     }
 
     void Spawn()

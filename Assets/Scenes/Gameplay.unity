@@ -5541,6 +5541,14 @@ MonoBehaviour:
   bombChance: 20
   fruitPrefab: {fileID: 8805424109967150763, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
   bombPrefab: {fileID: 8446339323112853869, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
+  currentWave: 0
+  waves:
+  - isBomb: 0
+    x: 0
+  - isBomb: 1
+    x: 1
+  - isBomb: 0
+    x: -4
 --- !u!4 &1218804783
 Transform:
   m_ObjectHideFlags: 0
