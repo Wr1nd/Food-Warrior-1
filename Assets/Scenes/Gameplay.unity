@@ -5400,9 +5400,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b6c4b8ef8604313abd85951f00d414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruits:
-  - {fileID: 5562865498203783750, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
-  - {fileID: 6118899593155832025, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
+  bombPrefab: {fileID: 6118899593155832025, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
+  fruitPrefab: {fileID: 5562865498203783750, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  waves:
+  - delay: 0
+    isBomb: 0
+    x: 0
+    velocity: {x: 0, y: 0}
+  - delay: 0
+    isBomb: 1
+    x: 0
+    velocity: {x: 0, y: 0}
+  - delay: 0
+    isBomb: 0
+    x: 0
+    velocity: {x: 0, y: 0}
 --- !u!4 &1888221814
 Transform:
   m_ObjectHideFlags: 0
