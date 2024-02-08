@@ -5403,18 +5403,42 @@ MonoBehaviour:
   bombPrefab: {fileID: 6118899593155832025, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
   fruitPrefab: {fileID: 5562865498203783750, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
   waves:
-  - delay: 0
-    isBomb: 0
-    x: 0
-    velocity: {x: 0, y: 0}
-  - delay: 0
-    isBomb: 1
-    x: 0
-    velocity: {x: 0, y: 0}
-  - delay: 0
-    isBomb: 0
-    x: 0
-    velocity: {x: 0, y: 0}
+  - items:
+    - isBomb: 0
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 10}
+  - items:
+    - isBomb: 0
+      delay: 0
+      x: -5
+      velocity: {x: 5, y: 12}
+    - isBomb: 0
+      delay: 0
+      x: 5
+      velocity: {x: -5, y: 12}
+  - items:
+    - isBomb: 0
+      delay: 1
+      x: -5
+      velocity: {x: 0, y: 10}
+    - isBomb: 0
+      delay: 1
+      x: 0
+      velocity: {x: 0, y: 11}
+    - isBomb: 0
+      delay: 1
+      x: 5
+      velocity: {x: 0, y: 12}
+  - items:
+    - isBomb: 1
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 10}
+    - isBomb: 0
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 8}
 --- !u!4 &1888221814
 Transform:
   m_ObjectHideFlags: 0
