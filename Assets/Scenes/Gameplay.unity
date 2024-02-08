@@ -240,6 +240,30 @@ MonoBehaviour:
   bombPrefab: {fileID: 4167279910079843114, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
   spawnRate: 0.5
   bombChance: 20
+  waves:
+  - items:
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 10}
+  - items:
+    - delay: 0
+      isBomb: 1
+      x: 0
+      velocity: {x: 0, y: 7}
+  - items:
+    - delay: 0
+      isBomb: 0
+      x: -5
+      velocity: {x: 0, y: 12}
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 12}
+    - delay: 0.5
+      isBomb: 1
+      x: 5
+      velocity: {x: -5, y: 12}
 --- !u!4 &240053226
 Transform:
   m_ObjectHideFlags: 0
