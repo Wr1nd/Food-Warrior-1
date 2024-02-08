@@ -11,7 +11,9 @@ public class SpawnItemData
 	public float x;
 	public Vector2 velocity = new Vector2(0, 10f);
 
-	// isRandomPosition, isRandomVelocity, isRandomBomb
+	public bool rV;
+	public float xOffset;
+	public float bombChance;
 }
 
 [Serializable]

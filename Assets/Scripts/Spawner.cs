@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class Spawner : MonoBehaviour
@@ -20,9 +22,18 @@ public class Spawner : MonoBehaviour
 				await new WaitForSeconds(item.delay);
 
 				var prefab = item.isBomb ? bombPrefab : fruitPrefab;
+				if (item.bombChance > Random.Range(1f, 100f)) prefab = bombPrefab;
+
 				var go = Instantiate(prefab);
-				go.transform.position = new Vector3(item.x, -5, 0);
+
+				var offset = Random.Range(-item.xOffset, item.xOffset);
+				go.transform.position = new Vector3(item.x + offset, -5, 0);
+
 				go.GetComponent<Rigidbody2D>().velocity = item.velocity;
+				if (item.rV)
+				{
+					go.GetComponent<Rigidbody2D>().velocity += new Vector2(Random.Range(-5f, 5f), Random.Range(-3f, 4f));
+				}
 
 			}
 

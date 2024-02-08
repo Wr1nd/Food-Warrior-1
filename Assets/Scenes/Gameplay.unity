@@ -246,24 +246,75 @@ MonoBehaviour:
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 10}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
   - items:
     - delay: 0
       isBomb: 1
       x: 0
       velocity: {x: 0, y: 7}
+      isRandomVelocity: 0
+      randomXOffset: 2
+      bombChance: 0
   - items:
     - delay: 0
       isBomb: 0
       x: -5
       velocity: {x: 0, y: 12}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 12}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
     - delay: 0.5
       isBomb: 1
       x: 5
       velocity: {x: -5, y: 12}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
+  - items:
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 0}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 0}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 0}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 0}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
+    - delay: 0
+      isBomb: 0
+      x: 0
+      velocity: {x: 0, y: 0}
+      isRandomVelocity: 0
+      randomXOffset: 0
+      bombChance: 0
 --- !u!4 &240053226
 Transform:
   m_ObjectHideFlags: 0
