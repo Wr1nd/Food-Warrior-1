@@ -7,6 +7,7 @@ public class Food : MonoBehaviour
 
     public GameObject leftSlice;
     public GameObject rightSlice;
+    public Color juiceColor;
 
     void Start()
     {
@@ -31,9 +32,13 @@ public class Food : MonoBehaviour
 
     public void Slice()
     {
+        // custom color particles
         var particles = Instantiate(explodeParticles);
         particles.transform.position = transform.position;
+        particles.GetComponent<ParticleSystem>().startColor = juiceColor;
+        particles.GetComponentsInChildren<ParticleSystem>()[1].startColor = juiceColor;
 
+        // slice fruit parts
         transform.DetachChildren();
         var leftRb = leftSlice.AddComponent<Rigidbody2D>();
         var rightRb = rightSlice.AddComponent<Rigidbody2D>();
