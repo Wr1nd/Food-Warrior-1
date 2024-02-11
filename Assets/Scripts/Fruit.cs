@@ -30,6 +30,19 @@ public class Fruit : MonoBehaviour
         var particles = Instantiate(explodeParticles);
         particles.transform.position = transform.position;
 
+        if(!CompareTag("Boom"))Split();
+
         Destroy(gameObject);
+    }
+
+    void Split()
+    {
+        var children = GetComponentsInChildren<MeshRenderer>();
+        foreach (var child in children)
+        {
+            var childRb = child.gameObject.AddComponent<Rigidbody2D>();
+            childRb.velocity = rb.velocity + Random.insideUnitCircle;
+        }
+        transform.DetachChildren();
     }
 }
