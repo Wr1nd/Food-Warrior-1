@@ -44,5 +44,6 @@ public class Slicer : MonoBehaviour
 
 		comboTimeLeft = 0.2f;
 		comboCount++;
+		GameManager.score++;
 	}
 }
