@@ -4,6 +4,7 @@ public class Fruit : MonoBehaviour
 {
     public GameObject explodeParticles;
     Rigidbody2D rb;
+    public Color juiceColor;
 
     void Start()
     {
@@ -30,12 +31,12 @@ public class Fruit : MonoBehaviour
         var particles = Instantiate(explodeParticles);
         particles.transform.position = transform.position;
 
-        if(!CompareTag("Boom"))Split();
+        if(!CompareTag("Boom"))Split(particles);
 
         Destroy(gameObject);
     }
 
-    void Split()
+    void Split(GameObject particles)
     {
         var children = GetComponentsInChildren<MeshRenderer>();
         foreach (var child in children)
@@ -44,5 +45,8 @@ public class Fruit : MonoBehaviour
             childRb.velocity = rb.velocity + Random.insideUnitCircle;
         }
         transform.DetachChildren();
+
+        particles.GetComponent<ParticleSystem>().startColor = juiceColor;
+        particles.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = juiceColor;
     }
 }

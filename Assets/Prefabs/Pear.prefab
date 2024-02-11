@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeParticles: {fileID: 2737539631479863564, guid: 94eca1c7f7b464f91a566c0f12a165b8, type: 3}
+  juiceColor: {r: 0.22745098, g: 0.7176471, b: 0.47638524, a: 1}
 --- !u!1001 &4108880493167912528
 PrefabInstance:
   m_ObjectHideFlags: 0
