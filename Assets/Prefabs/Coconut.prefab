@@ -114,6 +114,8 @@ MonoBehaviour:
   leftSide: {fileID: 2481063832055787955}
   rightSide: {fileID: 2546899748452675135}
   juiceColor: {r: 1, g: 1, b: 1, a: 1}
+  spawnSound: {fileID: 8300000, guid: 66d60676357b075419ae6f1a7457807e, type: 3}
+  sliceSound: {fileID: 8300000, guid: 6315b246097e2dc4b98d417547c06cb4, type: 3}
 --- !u!1001 &3364166626785889506
 PrefabInstance:
   m_ObjectHideFlags: 0
