@@ -49,6 +49,7 @@ public class Food : MonoBehaviour
         rightRb.velocity = rb.velocity + new Vector2(2,0);
 
         AudioSystem.Play(sliceSound);
+        GameManager.score++;
         Destroy(gameObject);
     }
 }

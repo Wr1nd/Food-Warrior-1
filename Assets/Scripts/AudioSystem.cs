@@ -9,8 +9,8 @@ public class AudioSystem : MonoBehaviour
 		source = GetComponent<AudioSource>();
 	}
 
-	public static void Play(AudioClip clip)
+	public static void Play(AudioClip clip,float volume = 1f)
 	{
-		source.PlayOneShot(clip);
+		source.PlayOneShot(clip,volume);
 	}
 }
