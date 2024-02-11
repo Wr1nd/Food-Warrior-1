@@ -114,6 +114,8 @@ MonoBehaviour:
   leftSlice: {fileID: 1442392440517567689}
   rightSlice: {fileID: 1929447302111155652}
   juiceColor: {r: 0.9339623, g: 0.927955, b: 0.71809363, a: 1}
+  throwSound: {fileID: 8300000, guid: 66d60676357b075419ae6f1a7457807e, type: 3}
+  sliceSound: {fileID: 8300000, guid: 80b92fc8bd53a8245ab3819ae639e6b7, type: 3}
 --- !u!1001 &1587430670876469397
 PrefabInstance:
   m_ObjectHideFlags: 0

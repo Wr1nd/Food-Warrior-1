@@ -8,12 +8,15 @@ public class Food : MonoBehaviour
     public GameObject leftSlice;
     public GameObject rightSlice;
     public Color juiceColor;
+    public AudioClip throwSound;
+    public AudioClip sliceSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         //rb.velocity = new Vector2(0,Random.Range(7f,13f));
         rb.angularVelocity = Random.Range(-360f, 360f);
+        AudioSystem.Play(throwSound);
     }
 
     void Update()
@@ -45,6 +48,7 @@ public class Food : MonoBehaviour
         leftRb.velocity = rb.velocity + new Vector2(-2,0);
         rightRb.velocity = rb.velocity + new Vector2(2,0);
 
+        AudioSystem.Play(sliceSound);
         Destroy(gameObject);
     }
 }
