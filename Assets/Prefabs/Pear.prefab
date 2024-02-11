@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 6488680288489534511, guid: 1ad2468810e1643c1a2eeb560b1d307e, type: 3}
+  sliceSound: {fileID: 8300000, guid: faf32607316e4cc4d8c944f12416772f, type: 3}
+  missSound: {fileID: 8300000, guid: 874471c6eda1eed4aa259e2cfc435011, type: 3}
+  throwSound: {fileID: 8300000, guid: 66d60676357b075419ae6f1a7457807e, type: 3}
 --- !u!1001 &3650667919740231293
 PrefabInstance:
   m_ObjectHideFlags: 0
