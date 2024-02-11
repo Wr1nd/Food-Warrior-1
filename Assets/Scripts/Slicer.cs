@@ -4,6 +4,11 @@ public class Slicer : MonoBehaviour
 {
 	Rigidbody2D rb;
 
+	public int comboCount;
+	public float comboTimeLeft;
+
+	public AudioClip comboSound;
+
 	void Start()
 	{
 		Application.targetFrameRate = 60;
@@ -18,6 +23,17 @@ public class Slicer : MonoBehaviour
 		worldPos.z = 0;
 
 		rb.MovePosition(worldPos);
+
+		comboTimeLeft -= Time.deltaTime;
+		if (comboTimeLeft <= 0)
+		{
+			if (comboCount > 2)
+			{
+				AudioSystem.Play(comboSound);
+			}
+
+			comboCount = 0;
+		}
 	}
 
 
@@ -25,5 +41,8 @@ public class Slicer : MonoBehaviour
 	{
 		var fruit = other.gameObject.GetComponent<Fruit>();
 		fruit.Slice();
+
+		comboTimeLeft = 0.2f;
+		comboCount++;
 	}
 }
