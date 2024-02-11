@@ -588,6 +588,16 @@ MonoBehaviour:
       x: 0
       velocity: {x: 0, y: 10}
       isRandomPosition: 0
+    - isFruit: 1
+      delay: 0
+      x: -3
+      velocity: {x: 0, y: 10}
+      isRandomPosition: 0
+    - isFruit: 1
+      delay: 0
+      x: 3
+      velocity: {x: 0, y: 10}
+      isRandomPosition: 0
   - fruits:
     - isFruit: 0
       delay: 0
@@ -5666,6 +5676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e447dc0629f3c4d5f9bcc8cf9cb5fa99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  comboScore: 0
+  comboTimeLeft: 0
+  comboSound: {fileID: 8300000, guid: 96d502199d68aae4086e7e08605ad8cd, type: 3}
 --- !u!96 &2057270875
 TrailRenderer:
   serializedVersion: 3
