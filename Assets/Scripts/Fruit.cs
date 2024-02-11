@@ -15,6 +15,8 @@ public class Fruit : MonoBehaviour
     public GameObject leftSlice;
     public GameObject rightSlice;
 
+    public Color color;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,8 +42,11 @@ public class Fruit : MonoBehaviour
 
     public void Slice()
     {
+        var splash = Instantiate(splashParticlePrefab,transform.position,Quaternion.Euler(0,0,0));
+        splash.GetComponent<ParticleSystem>().startColor = color;
+
         var particle = Instantiate(particlePrefab);
-        Instantiate(splashParticlePrefab);
+        particle.GetComponent<ParticleSystem>().startColor = color;
         particle.transform.position = transform.position;
         Destroy(gameObject);
 
