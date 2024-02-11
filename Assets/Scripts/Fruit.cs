@@ -37,7 +37,12 @@ public class Fruit : MonoBehaviour
     {
         print(":(");
         Destroy(gameObject);
-        AudioSystem.Play(missSound);
+
+        if (!gameObject.CompareTag("Bomb"))
+        {
+            AudioSystem.Play(missSound);
+            FindObjectOfType<GameManager>().lives--;
+        }
     }
 
     public void Slice()

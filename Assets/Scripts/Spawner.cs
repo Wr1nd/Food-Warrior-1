@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
     public GameObject bombPrefab;
 
     public List<Wave> waves = new();
+    public List<GameObject> fruitPrefabs;
     public int currentWave;
 
     async void Start()
@@ -39,7 +40,8 @@ public class Spawner : MonoBehaviour
                 var fruit = wave.fruits[i];
                 await new WaitForSeconds(fruit.delay);
 
-                var prefab = fruit.isFruit ? fruitPrefab : bombPrefab;
+                var currentFruitPrefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Count)];
+                var prefab = fruit.isFruit ? currentFruitPrefab : bombPrefab;
                 var obj = Instantiate(prefab);
                 var x = fruit.isRandomPosition ? Random.Range(-3f,3f): fruit.x;
                 obj.transform.position = new Vector3(x, -5, 0);
