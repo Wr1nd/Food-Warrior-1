@@ -4987,6 +4987,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboCount: 0
   comboTimeLeft: 0
+  comboSounds:
+  - {fileID: 8300000, guid: 96d502199d68aae4086e7e08605ad8cd, type: 3}
+  - {fileID: 8300000, guid: 6cdd4c3c255e7a342a2a9097e0e6c281, type: 3}
+  - {fileID: 8300000, guid: 9bc8f7c58f096fa4da1a25fba8224c72, type: 3}
+  - {fileID: 8300000, guid: d8b5b1999a35d0c4fa889199e1bfcd7d, type: 3}
+  - {fileID: 8300000, guid: 2339ef362a1bc8a4c93d13e6ca47d34d, type: 3}
+  - {fileID: 8300000, guid: b6307b35913245144a65d1879073ca58, type: 3}
+  - {fileID: 8300000, guid: f1dbcd01d2d72bd4d9b3b79d315407cd, type: 3}
+  - {fileID: 8300000, guid: bab27b8cb4f13dd4d859b5f53f5ead23, type: 3}
 --- !u!4 &417718475
 Transform:
   m_ObjectHideFlags: 0
@@ -5692,6 +5701,14 @@ MonoBehaviour:
     - isBomb: 0
       delay: 0
       x: 1
+      velocity: {x: 0, y: 12}
+    - isBomb: 0
+      delay: 0
+      x: 3
+      velocity: {x: 0, y: 12}
+    - isBomb: 0
+      delay: 0
+      x: 5
       velocity: {x: 0, y: 12}
   - items:
     - isBomb: 0

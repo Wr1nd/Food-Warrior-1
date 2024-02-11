@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Slicer : MonoBehaviour
@@ -6,6 +7,7 @@ public class Slicer : MonoBehaviour
 
 	public int comboCount;
 	public float comboTimeLeft;
+	public List<AudioClip> comboSounds;
 
 	void Start()
 	{
@@ -24,9 +26,10 @@ public class Slicer : MonoBehaviour
 		comboTimeLeft -= Time.deltaTime;
 		if (comboTimeLeft <= 0)
 		{
-			if (comboCount > 2)
+			if (comboCount >= 3)
 			{
-				print("COMBO!!!!");
+
+				AudioSystem.Play(comboSounds[comboCount-3]);
 			}
 			comboCount = 0;
 		}
