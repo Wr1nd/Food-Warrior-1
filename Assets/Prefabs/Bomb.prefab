@@ -213,6 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeParticles: {fileID: 6218118643360602740, guid: 1e8ef5e1cb7b84b5c8ebcc8d285e499c, type: 3}
+  juiceColor: {r: 0, g: 0, b: 0, a: 0}
+  spawnSound: {fileID: 8300000, guid: a1ada14533b40ab40bc2497d952c5ed6, type: 3}
 --- !u!1 &7366186181203025090
 GameObject:
   m_ObjectHideFlags: 0

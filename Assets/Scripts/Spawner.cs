@@ -4,7 +4,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 	public GameObject bombPrefab;
-	public GameObject fruitPrefab;
+	public List<GameObject> fruitPrefabs;
 	public List<Wave> waves;
 
 	async void Start()
@@ -15,12 +15,13 @@ public class Spawner : MonoBehaviour
 			{
 				await new WaitForSeconds(fruit.delay);
 
-				var prefab = fruit.isBomb ? bombPrefab : fruitPrefab;
+				var randomFruit = fruitPrefabs[Random.Range(0, fruitPrefabs.Count)];
+				var prefab = fruit.isBomb ? bombPrefab : randomFruit;
 				var go = Instantiate(prefab);
 				go.transform.position = new Vector3(fruit.x, -5f, 0);
 
-				var rigidbody2D = go.GetComponent<Rigidbody2D>();
-				rigidbody2D.velocity = fruit.velocity;
+				var rb = go.GetComponent<Rigidbody2D>();
+				rb.velocity = fruit.velocity;
 			}
 
 			await new WaitForSeconds(3f);

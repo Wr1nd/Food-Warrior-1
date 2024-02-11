@@ -5,11 +5,14 @@ public class Fruit : MonoBehaviour
     public GameObject explodeParticles;
     Rigidbody2D rb;
     public Color juiceColor;
+    public AudioClip spawnSound;
+    public AudioClip sliceSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.angularVelocity = Random.Range(-360,360);
+        AudioSystem.Play(spawnSound);
     }
 
     void Update()
@@ -32,6 +35,7 @@ public class Fruit : MonoBehaviour
         particles.transform.position = transform.position;
 
         if(!CompareTag("Boom"))Split(particles);
+        AudioSystem.Play(sliceSound);
 
         Destroy(gameObject);
     }

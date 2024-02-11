@@ -5401,7 +5401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 6118899593155832025, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
-  fruitPrefab: {fileID: 5562865498203783750, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  fruitPrefabs:
+  - {fileID: 5562865498203783750, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  - {fileID: 1816530893946001433, guid: 340b32f6a3cbe452fa67ab2942009be0, type: 3}
   waves:
   - items:
     - isBomb: 0
