@@ -4,6 +4,8 @@ public class Fruit : MonoBehaviour
 {
     public GameObject explodeParticles;
     Rigidbody2D rb;
+    public GameObject leftSide;
+    public GameObject rightSide;
 
     void Start()
     {
@@ -29,6 +31,13 @@ public class Fruit : MonoBehaviour
     {
         var particles = Instantiate(explodeParticles);
         particles.transform.position = transform.position;
+
+        // separate children
+        transform.DetachChildren();
+        var leftRb = leftSide.AddComponent<Rigidbody2D>();
+        var rightRb = rightSide.AddComponent<Rigidbody2D>();
+        leftRb.velocity = rb.velocity + new Vector2(-2,0);
+        rightRb.velocity = rb.velocity + new Vector2(2,0);
 
         Destroy(gameObject);
     }
