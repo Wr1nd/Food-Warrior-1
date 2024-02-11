@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
-	public GameObject fruitPrefab;
+	public List<GameObject> fruitPrefabs;
 	public GameObject bombPrefab;
 	public float spawnRate = 1;
 	public float bombChance = 20;
@@ -21,7 +21,8 @@ public class Spawner : MonoBehaviour
 			{
 				await new WaitForSeconds(item.delay);
 
-				var prefab = item.isBomb ? bombPrefab : fruitPrefab;
+				var randomFruit = fruitPrefabs[Random.Range(0, fruitPrefabs.Count)];
+				var prefab = item.isBomb ? bombPrefab : randomFruit;
 				if (item.bombChance > Random.Range(1f, 100f)) prefab = bombPrefab;
 
 				var go = Instantiate(prefab);
@@ -39,15 +40,5 @@ public class Spawner : MonoBehaviour
 
 			await new WaitForSeconds(3);
 		}
-	}
-
-
-	public void Spawn()
-	{
-		var prefab = Random.Range(0, 100) < (100-bombChance) ? fruitPrefab : bombPrefab;
-
-		var obj = Instantiate(prefab);
-		var x = Random.Range(-5f, 5f);
-		obj.transform.position = new Vector3(x, -5, 0);
 	}
 }

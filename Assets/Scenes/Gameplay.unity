@@ -236,7 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27519383f01f44d15920fb7a46816a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitPrefab: {fileID: 1416866266727210064, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  fruitPrefabs:
+  - {fileID: 1416866266727210064, guid: e8a7c968be74441f4a3ac7568731d6ce, type: 3}
+  - {fileID: 6041933251524921301, guid: 340b32f6a3cbe452fa67ab2942009be0, type: 3}
   bombPrefab: {fileID: 4167279910079843114, guid: dbfab6984c95b47c4aaed474605cb600, type: 3}
   spawnRate: 0.5
   bombChance: 20
@@ -246,74 +248,74 @@ MonoBehaviour:
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 10}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
   - items:
     - delay: 0
       isBomb: 1
       x: 0
       velocity: {x: 0, y: 7}
-      isRandomVelocity: 0
-      randomXOffset: 2
+      rV: 0
+      xOffset: 0
       bombChance: 0
   - items:
     - delay: 0
       isBomb: 0
       x: -5
       velocity: {x: 0, y: 12}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 12}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0.5
       isBomb: 1
       x: 5
       velocity: {x: -5, y: 12}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
   - items:
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 0}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 0}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 0}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 0}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
     - delay: 0
       isBomb: 0
       x: 0
       velocity: {x: 0, y: 0}
-      isRandomVelocity: 0
-      randomXOffset: 0
+      rV: 0
+      xOffset: 0
       bombChance: 0
 --- !u!4 &240053226
 Transform:

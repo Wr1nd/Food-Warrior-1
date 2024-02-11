@@ -113,6 +113,7 @@ MonoBehaviour:
   explodeParticles: {fileID: 6675157654169718505, guid: 2efd8320c835140ab9ffc4c25e4170ca, type: 3}
   leftSide: {fileID: 8230833888291603198}
   rightSide: {fileID: 3972469007100025733}
+  juiceColor: {r: 0.29411772, g: 0.85882354, b: 0.60750943, a: 1}
 --- !u!1001 &4314556548245300948
 PrefabInstance:
   m_ObjectHideFlags: 0
