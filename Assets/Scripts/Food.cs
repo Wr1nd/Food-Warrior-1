@@ -5,6 +5,9 @@ public class Food : MonoBehaviour
     Rigidbody2D rb;
     public GameObject explodeParticles;
 
+    public GameObject leftSlice;
+    public GameObject rightSlice;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +33,12 @@ public class Food : MonoBehaviour
     {
         var particles = Instantiate(explodeParticles);
         particles.transform.position = transform.position;
+
+        transform.DetachChildren();
+        var leftRb = leftSlice.AddComponent<Rigidbody2D>();
+        var rightRb = rightSlice.AddComponent<Rigidbody2D>();
+        leftRb.velocity = rb.velocity + new Vector2(-2,0);
+        rightRb.velocity = rb.velocity + new Vector2(2,0);
 
         Destroy(gameObject);
     }
