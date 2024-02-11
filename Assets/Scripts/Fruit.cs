@@ -5,10 +5,15 @@ public class Fruit : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject particlePrefab;
+    public GameObject splashParticlePrefab;
+
 
     public AudioClip sliceSound;
     public AudioClip missSound;
     public AudioClip throwSound;
+
+    public GameObject leftSlice;
+    public GameObject rightSlice;
 
     void Start()
     {
@@ -36,9 +41,20 @@ public class Fruit : MonoBehaviour
     public void Slice()
     {
         var particle = Instantiate(particlePrefab);
+        Instantiate(splashParticlePrefab);
         particle.transform.position = transform.position;
         Destroy(gameObject);
 
+        // separate fruit slices
+        var rb1 = leftSlice.AddComponent<Rigidbody2D>();
+        var rb2 = rightSlice.AddComponent<Rigidbody2D>();
+        rb1.velocity = rb.velocity + Vector2.left;
+        rb2.velocity = rb.velocity + Vector2.right;
+        rb1.angularVelocity = -10;
+        rb2.angularVelocity = 10;
+        transform.DetachChildren();
+
         AudioSystem.Play(sliceSound);
+
     }
 }
