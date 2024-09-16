@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+
+    public AudioClip splashSound;
+    public AudioClip gameplayMusic;
     Camera cam;
 
     void Start()
     {
         cam = Camera.main;
+        Audio.Play(gameplayMusic);
     }
 
     void Update()
@@ -18,6 +22,7 @@ public class Sword : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Audio.Play(splashSound);
         Destroy(other.gameObject);
     }
 }

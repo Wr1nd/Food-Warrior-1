@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Apple
+  - Avocado
+  - Banana
+  - Coconut
+  - Lemon
+  - Mushroom
+  - Onion
+  - Pear
+  - Pineapple
+  - Watermellon
   layers:
   - Default
   - TransparentFX
